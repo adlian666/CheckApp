@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Fragment.CheckFragment">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+                <ImageButton
+                    android:id="@+id/imbtn_back"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:scaleType="fitStart"
+                    android:src="@mipmap/back" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="添加验收台账"
+                    android:textColor="@color/text_menu"
+                    android:textSize="18sp" />
+
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/my_item"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="验收日期"
+                    style="@style/text" />
+                <Button
+                    android:id="@+id/btn_check_time"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-1dp"
+                    android:layout_marginBottom="-1dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/my_item1"
+                    android:text="请选择日期"
+                    style="@style/text"/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="班次"
+                    style="@style/text"/>
+
+                <Spinner
+                    android:spinnerMode="dropdown"
+                    android:id="@+id/sp_class_number"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-1dp"
+                    android:layout_marginBottom="-1dp"
+                    android:layout_weight="2"
+                    android:paddingLeft="115dp"
+                    android:background="@drawable/my_item1"
+                    android:entries="@array/class_number"
+                    android:gravity="center_horizontal"
+                    style="@style/text"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/my_item"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="施工地点"
+                    style="@style/text"/>
+
+                <Spinner
+                    android:id="@+id/sp_location"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-1dp"
+                    android:layout_marginBottom="-1dp"
+                    android:layout_weight="2"
+                    android:paddingLeft="115dp"
+                    android:background="@drawable/my_item1"
+                    android:entries="@array/drill_pro"
+                    android:gravity="center_horizontal"
+                    style="@style/text"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="钻孔号"
+                    style="@style/text" />
+
+                <EditText
+                    android:id="@+id/et_drill_no"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-1dp"
+                    android:layout_marginBottom="-1dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/my_item1"
+                    android:gravity="center"
+                    style="@style/text"
+                    android:hint="钻机型号"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/my_item"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="钻机型号"
+                    style="@style/text" />
+
+                <EditText
+                    android:id="@+id/et_machine_model"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-1dp"
+                    android:layout_marginBottom="-1dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/my_item1"
+                    android:gravity="center"
+                    style="@style/text"
+                    android:hint="钻机型号"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="钻机编号"
+                    style="@style/text"
+                    />
+
+                <EditText
+                    android:id="@+id/et_machine_code"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-1dp"
+                    android:layout_marginBottom="-1dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/my_item1"
+                    android:gravity="center"
+                    style="@style/text"
+                    android:hint="钻机编号"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/my_item"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="孔径(Φ)"
+                    style="@style/text" />
+
+                <EditText
+                    android:id="@+id/et_drill_d"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-1dp"
+                    android:layout_marginBottom="-1dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/my_item1"
+                    android:gravity="center"
+                    style="@style/text"
+                    android:hint="孔径"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="倾角(°)"
+                    style="@style/text"/>
+
+                <EditText
+                    android:id="@+id/et_drill_"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-1dp"
+                    android:layout_marginBottom="-1dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/my_item1"
+                    android:gravity="center"
+                    android:hint="倾角"
+                    style="@style/text"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/my_item"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="钻孔深度(m)"
+                    style="@style/text"/>
+
+                <EditText
+                    android:id="@+id/et_drill_depth"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-1dp"
+                    android:layout_marginBottom="-1dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/my_item1"
+                    android:gravity="center"
+                    android:hint="钻孔深度"
+                    style="@style/text"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="封孔深度(m)"
+                    style="@style/text" />
+
+                <EditText
+                    android:id="@+id/et_fk_depth"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-1dp"
+                    android:layout_marginBottom="-1dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/my_item1"
+                    android:gravity="center"
+                    android:hint="封孔深度"
+                    style="@style/text"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/my_item"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="验收情况"
+                    style="@style/text" />
+                <Spinner
+                    android:id="@+id/sp_check_result"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-1dp"
+                    android:layout_marginBottom="-1dp"
+                    android:layout_weight="2"
+                    android:paddingLeft="115dp"
+                    android:background="@drawable/my_item1"
+                    android:entries="@array/check_result"
+                    android:gravity="center_horizontal"
+                    style="@style/text"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="施工人员"
+                    style="@style/text" />
+
+                <EditText
+                    android:id="@+id/et_builder"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-1dp"
+                    android:layout_marginBottom="-1dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/my_item1"
+                    android:gravity="center"
+                    android:hint="施工人员"
+                    style="@style/text"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/my_item"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="跟班队长"
+                    style="@style/text" />
+
+                <EditText
+                    android:id="@+id/et_monitor"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-1dp"
+                    android:layout_marginBottom="-1dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/my_item1"
+                    android:gravity="center"
+                    android:hint="跟班队长"
+                    style="@style/text"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="验收人"
+                    style="@style/text"/>
+
+                <EditText
+                    android:id="@+id/et_checker"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-1dp"
+                    android:layout_marginBottom="-1dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/my_item1"
+                    android:gravity="center"
+                    android:hint="验收人"
+                    style="@style/text"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_submmit"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/my_item_btn"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="#ffffff"
+                style="@style/text"></Button>
+
+
+        </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</ScrollView>

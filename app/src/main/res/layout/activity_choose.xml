@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ChooseActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/Theme.AppCompat.NoActionBar">
+        <TextView
+            android:id="@+id/tv_openlock_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="请选择钻孔性质"
+            android:textColor="@color/text_menu"
+            android:textSize="18sp" />
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:gravity="center"
+            >
+            <Button
+                android:id="@+id/btn_bp"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+
+                android:text="爆破孔"
+                android:textColor="@color/text_menu"
+                android:textSize="24sp"
+                android:background="@drawable/my_item_btn"/>
+            <Button
+                android:id="@+id/btn_xy"
+                android:layout_marginLeft="150dp"
+                android:layout_toRightOf="@+id/btn_bp"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:text="卸压孔"
+                android:textColor="@color/text_menu"
+                android:textSize="24sp"
+                android:background="@drawable/my_item_btn"/>
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

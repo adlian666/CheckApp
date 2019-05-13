@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">验收台账</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textsize">18sp</string>
+    <string-array name="class_number">
+        <item>白班</item>
+        <item>中班</item>
+        <item>夜班</item>
+    </string-array>
+    <string-array name="class_number1">
+        <item>白班</item>
+        <item>中班</item>
+        <item>夜班</item>
+        <item>全部</item>
+    </string-array>
+    <string-array name="drill_pro">
+        <item>卸压孔</item>
+        <item>爆破孔</item>
+    </string-array>
+    <string-array name="check_result">
+        <item>合格</item>
+        <item>不合格</item>
+    </string-array>
+</resources>
